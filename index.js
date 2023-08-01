@@ -56,6 +56,7 @@ function allWagesFor(record){
     return totalWages;
 }
 
-function calculatePayroll(){
-    
+function calculatePayroll(records){
+    const totalPayroll = records.reduce((acc, employee) => acc + allWagesFor(employee), 0);
+    return totalPayroll
 }
